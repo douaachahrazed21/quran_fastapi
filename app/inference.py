@@ -4,7 +4,7 @@ from difflib import SequenceMatcher
 from app.reference_text import get_reference_text
 from app.utils import appliquer_regles_personnalisees, surligner_erreurs
 
-model_path = "https://huggingface.co/tarteel-ai/whisper-base-ar-quran"
+model_path = "tarteel-ai/whisper-base-ar-quran"
 processor = WhisperProcessor.from_pretrained(model_path)
 model = WhisperForConditionalGeneration.from_pretrained(model_path)
 model.config.forced_decoder_ids = None
